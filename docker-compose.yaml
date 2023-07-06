@@ -9,8 +9,8 @@ services:
             - 8443:8443/tcp
             - 8080:8080/tcp
         environment:
-            - SINGLE_USERCREDENTIALS_USERNAME=admin
-            - SINGLE_USERCREDENTIALS_PASSWORD=nifipassword
+            - SINGLE_USER_CREDENTIALS_USERNAME=admin
+            - SINGLE_USER_CREDENTIALS_PASSWORD=nifipassword
         volumes:
             - "./sqljdbc_12.2/cht/mssql-jdbc-12.2.0.jre8.jar:/opt/jdbc/drivers/mssql-jdbc-12.2.0.jre8.jar"
             - "./sqljdbc_12.2/cht/mssql-jdbc-12.2.0.jre11.jar:/opt/jdbc/drivers/mssql-jdbc-12.2.0.jre11.jar"
