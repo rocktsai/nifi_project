@@ -2130,7 +2130,7 @@ CREATE TABLE test.dbo.Book_Level (
                             </entry>
                             <entry>
 <key>listing-strategy</key>
-<value>timestamps</value>
+<value>none</value>
                             </entry>
                             <entry>
 <key>Recurse Subdirectories</key>
@@ -3379,5 +3379,5 @@ CREATE TABLE test.dbo.Book_Level (
             <variables/>
         </processGroups>
     </snippet>
-    <timestamp>07/17/2023 02:18:15 UTC</timestamp>
+    <timestamp>07/19/2023 09:48:56 UTC</timestamp>
 </template>
