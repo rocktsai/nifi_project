@@ -2,7 +2,7 @@ version: '3'
 
 services:
     nifi-container:
-        image: apache/nifi:1.16.1
+        image: apache/nifi:1.19.0
         container_name: nifi-service
         restart: always
         ports:
@@ -12,14 +12,14 @@ services:
             - SINGLE_USER_CREDENTIALS_USERNAME=admin
             - SINGLE_USER_CREDENTIALS_PASSWORD=nifipassword
         volumes:
-            - "./sqljdbc_12.2/cht/mssql-jdbc-12.2.0.jre8.jar:/opt/jdbc/drivers/mssql-jdbc-12.2.0.jre8.jar"
-            - "./sqljdbc_12.2/cht/mssql-jdbc-12.2.0.jre11.jar:/opt/jdbc/drivers/mssql-jdbc-12.2.0.jre11.jar"
-            - "./dataset/:/tmp/dataset/"
+            - ./sqljdbc_12.2/cht/mssql-jdbc-12.2.0.jre8.jar:/opt/jdbc/drivers/mssql-jdbc-12.2.0.jre8.jar
+            - ./sqljdbc_12.2/cht/mssql-jdbc-12.2.0.jre11.jar:/opt/jdbc/drivers/mssql-jdbc-12.2.0.jre11.jar
+            - ./dataset/:/tmp/dataset/
         networks:
             - nifi-network
 
     nifi-registry-container:
-        image: apache/nifi-registry:1.16.1
+        image: apache/nifi-registry:1.19.0
         container_name: nifi-registry-service
         restart: always
         ports:
